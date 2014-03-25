@@ -19,7 +19,7 @@ shenv.pl hello.sh hello
 will show
 hello=hello world
 
-It does not executes scripts - it uses regexes to "interpret" only those part of scripts which exports environment variables or sources other scripts.
+It does not execute scripts - it uses regexes to "interpret" only those part of scripts which exports environment variables or sources other scripts.
 
 It is quick and dirty way to find out specified environment variables value.
 It works 90% for well formatted scripts, otherwise you always have long manual way to find out.
