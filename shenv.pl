@@ -63,11 +63,6 @@ sub expand_vars($) {
     return $_;
 }
 
-# store all export lines to %env
-sub import_lines(\@) {
-    my ($lines) = @_;
-}
-
 my %imported;
 sub import_script {
     my $file = expand_vars($_[0]);
