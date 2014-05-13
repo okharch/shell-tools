@@ -157,3 +157,8 @@ function vibrc {
 vi ~/.bashrc
 . ~/.bashrc
 }
+
+which()
+{
+(alias;declare -f)|/usr/bin/which --read-functions --read-alias $*
+}
