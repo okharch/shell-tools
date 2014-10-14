@@ -10,7 +10,7 @@ my $cmd_info_fn = "$ENV{HOME}/etc/cmd_info";
 my $force_rebuild = 1; # rebuild each time and don't store cache
 my ($re) = grep m{^[^-]},@ARGV;
 
-my ($rebuild) = $force_rebuild || grep m{^-r}, @ARGV;
+my ($rebuild) = $force_rebuild || grep(m{^-r}, @ARGV) || !(-e $cmd_info_fn);
 
 my $cmd_info = $rebuild? rebuild_cmd_info() : retrieve $cmd_info_fn; # if $rebuild || !-e $cmd_info_fn;
 
