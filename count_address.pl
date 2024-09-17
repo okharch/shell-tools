@@ -19,7 +19,7 @@ sub count_addresses {
     my $total = 0;
 
     # Пошук всіх "Буд." у тексті (в одному рядку)
-    while ($text =~ /Буд\.: ([^\n]+)/g) {
+    while ($text =~ /<div>Буд\.: ([^\n<>]+)/g) {
         my @building_list = split(/,\s*/, $1);
         $total += scalar @building_list;
     }
